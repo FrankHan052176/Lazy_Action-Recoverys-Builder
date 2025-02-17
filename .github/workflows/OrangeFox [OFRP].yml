@@ -116,8 +116,8 @@ jobs:
         export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
         export ALLOW_MISSING_DEPENDENCIES=true
         set -e
-        mkdir -p /home/runner/work/Action-TWRP-Builder/Action-TWRP-Builder/workspace/out/host/linux-x86/bin
-        cp /usr/bin/zopflipng /home/runner/work/Action-TWRP-Builder/Action-TWRP-Builder/workspace/out/host/linux-x86/bin
+        mkdir -p /home/runner/work/Lazy_Action-Recoverys-Builder/Lazy_Action-Recoverys-Builder/workspace/fox_10.0/out/host/linux-x86/bin
+        cp /usr/bin/zopflipng /home/runner/work/Lazy_Action-Recoverys-Builder/Lazy_Action-Recoverys-Builder/workspace/fox_10.0/out/host/linux-x86/bin
         lunch ${{ github.event.inputs.MAKEFILE_NAME }}-eng && make clean && mka adbd ${{ github.event.inputs.BUILD_TARGET }}image -j$(nproc --all)
       working-directory: ${{ steps.pwd.outputs.workspace-folder }}
       continue-on-error: true
